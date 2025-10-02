@@ -1,0 +1,46 @@
+html, body { margin: 0; font-family: 'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif; }
+
+.site-header {
+  background-image: linear-gradient(to bottom, gold, blue);
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand { display: flex; align-items: center; gap: 60px; }
+.brand h1 { margin: 0; font-size: 40px; }
+.avatar { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; }
+.main-nav { display: flex; gap: 30px; }
+.main-nav a { color: black; }
+.main-nav a:hover { text-decoration: underline; }
+
+main { background: blue; padding: 20px; }
+.card {
+  background-color: rgb(249, 238, 178);
+  margin: 12px auto;
+  padding: 14px;
+  border-top: 4px solid gold;
+  border-bottom: 4px solid gold;
+  max-width: 1100px;
+}
+h2 { margin: 0 0 10px; }
+
+.profile-figure { margin: 12px 0 0; }
+.profile-figure img { max-width: 220px; width: 100%; border-radius: 10px; display: block; }
+.profile-figure figcaption { font-size: 14px; margin-top: 6px; color: #222; }
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: 12px; margin-top: 10px; }
+.gallery figure { margin: 0; text-align: center; }
+.gallery img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
+.gallery figcaption { font-size: 14px; margin-top: 4px; }
+
+.vika { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.vika th, .vika td { padding: 4px; border: 2px solid gold; text-align: left; }
+.vika th { background: gold; }
+
+form { display: grid; gap: 6px; max-width: 600px; }
+input { padding: 8px; border: 1px solid gold; border-radius: 6px; background: white; }
+button { padding: 16px; border: none; border-radius: 8px; background: gold; color: black; cursor: pointer; }
+
+.site-footer { background-image: linear-gradient(to bottom, blue, gold); text-align: center; padding: 20px; }

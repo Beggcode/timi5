@@ -2,8 +2,162 @@
 <html lang="is">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Um mig - Bergþór</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <img src="images/ég.jpg" alt="Mynd af mér" class="avatar" />
+        <h1>Bergþór Páll Guðrúnarson</h1>
+      </div>
+
+      <nav class="main-nav" aria-label="Aðal valmynd">
+        <a href="#heim">Heim</a>
+        <a href="#um-mig">Um mig</a>
+        <a href="#hafa-samband">Hafa samband</a>
+      </nav>
+    </header>
+
+    <main id="heim">
+      <section id="um-mig" class="card">
+        <figure class="profile-figure">
+          <img src="images/ég.jpg" alt="mynd af mér" />
+        </figure>
+        <h2>Stutt kynning</h2>
+        <p>
+          Ég heiti Bergþór Páll Guðrúnarson og hef unnið sem bakari í níu ár.
+          Núna hef ég ákveðið að snúa mér að forritun, því tölvur og tölvuleikir
+          hafa alltaf heillað mig. Þegar ég var sextán ára safnaði ég mér pening
+          til að setja saman minn eigin tölvuturn til að spila, en fattaði svo
+          að það var eiginlega jafn skemmtilegt að skrúfa hann saman og læra um
+          tæknina á bakvið þetta allt.
+          <br /><br />
+          Í menntó fór ég í grunnnámið í rafiðngreinum, en endaði svo í
+          bakaranum og kláraði sveinspróf þar. Undanfarin ár hef ég verið að
+          læra forritun á eigin vegum, mest með Boot.dev og fullt af
+          Google-leit.
+          <br /><br />
+          Ég er líka mjög hrifinn af tónlist og spila stundum á rafmagnsgítar.
+          Ég var nokkuð laginn á tímabili, en er orðinn dálítið ryðgaður í dag.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Áhugamál</h2>
+        <ul>
+          <li>
+            Forritun (Búin að vera fikta í python, golang, git og linux
+            terminal)
+          </li>
+          <li>Tónlist (mikið metal og raftónlist en hlusta svo sem á allt)</li>
+          <li>Æfingar og hreyfing</li>
+        </ul>
+
+        <h3>Geggjaðar plötur</h3>
+        <div class="gallery">
+          <figure>
+            <img src="images/BMTH.jpg" alt="Bring Me The Horizon" />
+            <figcaption>
+              <b>Bring me the horizon</b> <br />Sempiternal
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/ChemicalBrothers.jpg"
+              alt="The Chemical Brothers"
+            />
+            <figcaption>
+              <b>Chemical Brothers</b><br />Exit planet dust
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="images/Deftones.jpg" alt="Deftones" />
+            <figcaption><b>Deftones</b><br />Diamond eyes</figcaption>
+          </figure>
+          <figure>
+            <img src="images/Justice.jpg" alt="Justice" />
+            <figcaption><b>Justice</b><br />Cross</figcaption>
+          </figure>
+          <figure>
+            <img src="images/LupeFiasco.jpg" alt="Lupe Fiasco" />
+            <figcaption><b>Lupe Fiasco</b><br />Samurai</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Vikuskipulag</h2>
+        <table class="vika">
+          <colgroup>
+            <col style="width: 30%" />
+            <col style="width: 35%" />
+            <col style="width: 35%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Dagur</th>
+              <th>Morgunmatur</th>
+              <th>Kvöldmatur</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mán</td>
+              <td>Hafragrautur</td>
+              <td>Franskar</td>
+            </tr>
+            <tr>
+              <td>Þri</td>
+              <td>Grjónagrautur</td>
+              <td>Ostafranskar</td>
+            </tr>
+            <tr>
+              <td>Mið</td>
+              <td>Skyr</td>
+              <td>Pizza</td>
+            </tr>
+            <tr>
+              <td>Fim</td>
+              <td>Cocoa puffs</td>
+              <td>Wagyu steik</td>
+            </tr>
+            <tr>
+              <td>Fös</td>
+              <td>Lucky charms</td>
+              <td>Börger</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="hafa-samband" class="card">
+        <h2>Hafa samband</h2>
+        <form>
+          <label for="nafn">Nafn</label>
+          <input id="nafn" name="nafn" type="text" required />
+
+          <label for="tpostur">Tölvupóstur</label>
+          <input id="tpostur" name="tpostur" type="email" required />
+
+          <label for="skilabod">Skilaboð</label>
+          <textarea id="skilabod" name="skilabod" rows="4"></textarea>
+
+          <button type="submit">Senda</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Bergþór</p>
+      <p>
+        <a href="mailto:beggman95@gmail.com">beggman95@gmail.com</a> ·
+        <a href="https://github.com/Beggcode" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
