@@ -1,39 +1,49 @@
-html, body { margin: 0; font-family: 'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif; }
+html, body { margin: 0; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
 
 .site-header {
   background-image: linear-gradient(to bottom, gold, blue);
-  color: black;
-  padding: 20px;
+  color: rgba(12, 12, 2, 0.654);
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.brand { display: flex; align-items: center; gap: 60px; }
-.brand h1 { margin: 0; font-size: 40px; }
-.avatar { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; }
+.head { display: flex; align-items: center; gap: 60px; }
+.head h1 { margin: 0; font-size: 35px; }
+.profile-figure-head { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; display: block; }
 .main-nav { display: flex; gap: 30px; }
-.main-nav a { color: black; }
-.main-nav a:hover { text-decoration: underline; }
+.main-nav a {
+  color: rgb(3, 2, 2);
+  text-decoration: none;
+}
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-underline-offset: 2px;
+}
+
 
 main { background: blue; padding: 20px; }
 .card {
-  background-color: rgb(249, 238, 178);
+  background-color: rgb(252, 247, 220);
   margin: 12px auto;
-  padding: 14px;
-  border-top: 4px solid gold;
+  padding: 25px;
+  border-radius: 0.5%;
+  border-top: 6px solid gold;
   border-bottom: 4px solid gold;
-  max-width: 1100px;
+  max-width: 1000px;
 }
 h2 { margin: 0 0 10px; }
 
-.profile-figure { margin: 12px 0 0; }
-.profile-figure img { max-width: 220px; width: 100%; border-radius: 10px; display: block; }
+.profile-figure { margin: 10px 0 0; display: flex; }
+.profile-figure img { max-width: 220px; width: 100%; border-radius: 20px; display: block; }
 .profile-figure figcaption { font-size: 14px; margin-top: 6px; color: #222; }
 
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: 12px; margin-top: 10px; }
-.gallery figure { margin: 0; text-align: center; }
-.gallery img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
-.gallery figcaption { font-size: 14px; margin-top: 4px; }
+.myndir { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: 12px; margin-top: 10px; }
+.myndir figure { margin: 0; text-align: center; }
+.myndir img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
+.myndir figcaption { font-size: 14px; margin-top: 4px; }
 
 .vika { width: 100%; border-collapse: collapse; table-layout: fixed; }
 .vika th, .vika td { padding: 4px; border: 2px solid gold; text-align: left; }
