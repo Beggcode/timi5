@@ -1,7 +1,9 @@
-html, body { margin: 0; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+html, body { margin: 0; font-family: 'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif; }
+
+*, *::before, *::after { box-sizing: border-box; }
 
 .site-header {
-  background-image: linear-gradient(to bottom, gold, blue);
+  background-image: linear-gradient(to bottom, gold, rgb(6, 6, 143));
   color: rgba(12, 12, 2, 0.654);
   padding: 30px;
   display: flex;
@@ -12,24 +14,16 @@ html, body { margin: 0; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Luci
 .head h1 { margin: 0; font-size: 35px; }
 .profile-figure-head { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; display: block; }
 .main-nav { display: flex; gap: 30px; }
-.main-nav a {
-  color: rgb(3, 2, 2);
-  text-decoration: none;
-}
+.main-nav a { color: rgb(3, 2, 2); text-decoration: none; }
 .main-nav a:hover,
-.main-nav a:focus-visible {
-  text-decoration: underline;
-  text-decoration-color: black;
-  text-underline-offset: 2px;
-}
+.main-nav a:focus-visible { text-decoration: underline; text-decoration-color: black; text-underline-offset: 2px; }
 
-
-main { background: blue; padding: 20px; }
+main { background: rgb(6, 6, 143); padding: 20px; }
 .card {
   background-color: rgb(252, 247, 220);
   margin: 12px auto;
   padding: 25px;
-  border-radius: 0.5%;
+  border-radius: 12px;      /* fixed from % to px for consistency */
   border-top: 6px solid gold;
   border-bottom: 4px solid gold;
   max-width: 1000px;
@@ -40,17 +34,50 @@ h2 { margin: 0 0 10px; }
 .profile-figure img { max-width: 220px; width: 100%; border-radius: 20px; display: block; }
 .profile-figure figcaption { font-size: 14px; margin-top: 6px; color: #222; }
 
-.myndir { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: 12px; margin-top: 10px; }
+.myndir { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 10px; }
 .myndir figure { margin: 0; text-align: center; }
-.myndir img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
+.myndir img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; }
 .myndir figcaption { font-size: 14px; margin-top: 4px; }
 
 .vika { width: 100%; border-collapse: collapse; table-layout: fixed; }
 .vika th, .vika td { padding: 4px; border: 2px solid gold; text-align: left; }
 .vika th { background: gold; }
 
-form { display: grid; gap: 6px; max-width: 600px; }
-input { padding: 8px; border: 1px solid gold; border-radius: 6px; background: white; }
-button { padding: 16px; border: none; border-radius: 8px; background: gold; color: black; cursor: pointer; }
+form { display: grid; gap: 8px; max-width: 600px; }
 
-.site-footer { background-image: linear-gradient(to bottom, blue, gold); text-align: center; padding: 20px; }
+input, textarea, select {
+  padding: 8px;
+  border: 1px solid gold;
+  border-radius: 6px;
+  background: white;
+  font: inherit;
+  color: inherit;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: 2px solid rgba(255, 215, 0, 0.75);
+  outline-offset: 2px;
+}
+
+button {
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: gold;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover { filter: brightness(0.95); }
+
+.site-footer {
+  background-image: linear-gradient(to bottom, rgb(6, 6, 143), gold);
+  text-align: center;
+  padding: 20px;
+}
